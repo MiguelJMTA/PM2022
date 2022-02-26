@@ -70,7 +70,7 @@ class _LoginState extends State<Login> {
           ),
         ),
         Positioned(
-          child: Image.asset("images/itclogo.png"),
+          child: Image.asset("images/itclogo.png",scale: 5,),
           bottom: 200,
         ),
         Positioned(
