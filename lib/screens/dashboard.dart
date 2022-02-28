@@ -17,6 +17,7 @@ class DashBoard extends StatelessWidget {
                 color: Colors.green[700]
               ),
                 currentAccountPicture: CircleAvatar(
+                  backgroundColor: Colors.green[700],
                   backgroundImage: AssetImage("images/itclogo.png"),
                 ),
                 accountName: Text('Jose Miguel Tierrablanca'),

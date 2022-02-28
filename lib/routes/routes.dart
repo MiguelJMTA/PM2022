@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter_interfaz/screens/dashboard.dart';
 
 import '../screens/fruitApp.dart';
 import '../screens/login.dart';
@@ -11,5 +12,6 @@ Map<String,WidgetBuilder> getAppRoutes(){
     '/fruitApp' : (BuildContext context) => FruitApp(),
     '/login' : (BuildContext context) => Login(),
     '/conversor' : (BuildContext context) => Conversor(),    
+    '/dashboard' : (BuildContext context) => DashBoard(),
   };
 }
