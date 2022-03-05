@@ -21,7 +21,7 @@ class DashBoard extends StatelessWidget {
                   backgroundImage: AssetImage("images/itclogo.png"),
                 ),
                 accountName: Text('Jose Miguel Tierrablanca'),
-                accountEmail: Text("1803042@itcelaya.edu.mx")),
+                accountEmail: Text("18030542@itcelaya.edu.mx")),
                 ListTile(
                   title: Text('Fruit App'),
                   subtitle: Text('Widget Challenge'),
@@ -37,7 +37,21 @@ class DashBoard extends StatelessWidget {
                   leading: Icon(Icons.change_circle_outlined),
                   trailing: Icon(Icons.chevron_right,color: Colors.black,),
                   onTap: (){Navigator.pushNamed(context, '/conversor');},
-                )
+                ),
+                ListTile(
+                  title: Text('Login con gradiente'),
+                  subtitle: Text('New Login'),
+                  leading: Icon(Icons.login),
+                  trailing: Icon(Icons.chevron_right,color: Colors.black,),
+                  onTap: (){Navigator.pushNamed(context, '/login_screen');},
+                ),
+                ListTile(
+                  title: Text('Notes'),
+                  subtitle: Text('Notes screen'),
+                  leading: Icon(Icons.note),
+                  trailing: Icon(Icons.chevron_right,color: Colors.black,),
+                  onTap: (){Navigator.pushNamed(context, '/notes');},
+                ),
           ],
         ),
       ),
