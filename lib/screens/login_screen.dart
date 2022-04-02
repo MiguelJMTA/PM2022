@@ -11,6 +11,7 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   bool _rememberMe = false;
   TextStyle kHintTextStyle = TextStyle(
+    fontSize: 10,
     color: Colors.black,
     fontWeight: FontWeight.bold,
     fontFamily: 'BhuTuka',

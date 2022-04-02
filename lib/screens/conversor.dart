@@ -60,7 +60,7 @@ class _ConversorState extends State<Conversor> {
             if (txtCelsiusController.text.toString() == "") {
               txtCelsiusController.text = "0";
             }
-            resultado =
+            resultado = 
                 (double.parse(txtCelsiusController.text.toString()) * (9 / 5) +
                             32)
                         .toString() +

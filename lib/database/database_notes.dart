@@ -10,8 +10,8 @@ class DatabaseNotes {
   static final _nombreDb = "PATM22";
   static final _versionDB = 1;
 
-  static late Database _database;
-  Future<Database> get database async {
+  static Database? _database;
+  Future<Database?> get database async {
     if (_database != null) return _database;
     _database = await _initDatabase();
     return _database;
@@ -21,7 +21,8 @@ class DatabaseNotes {
     Directory carpeta = await getApplicationDocumentsDirectory();
     String rutaBD = join(carpeta.path, _nombreDb);
     return await openDatabase(rutaBD,
-        version: _versionDB, onCreate: _crearTablas, onUpgrade: _updateTablas);
+        version: _versionDB, onCreate: _crearTablas, //onUpgrade: _updateTablas
+        );
   }
 
   _crearTablas(Database db, int version) {
@@ -32,22 +33,22 @@ class DatabaseNotes {
   _updateTablas(Database db, int oldVersion, int newVersion) {}
   Future<int> insert(Map<String, dynamic> row) async {
     var dbConexion = await database;
-    return dbConexion.insert("tbl_notas", row);
+    return dbConexion!.insert("tbl_notas", row);
   }
   
   Future <int> update(Map<String, dynamic> row) async{
     var dbConexion = await database;
-    return dbConexion.update("tbl_notas", row,where: "idNota = ?",whereArgs: [row['idNota']]);
+    return dbConexion!.update("tbl_notas", row,where: "idNota = ?",whereArgs: [row['idNota']]);
   }
 
   Future<int> delete(int idNota) async{
     var dbConexion = await database;
-    return dbConexion.delete("tbl_notas",where: "idNota = ?",whereArgs: [idNota]);
+    return dbConexion!.delete("tbl_notas",where: "idNota = ?",whereArgs: [idNota]);
   }
 
   Future<List<NotesDAO>> getAllNotes() async{
     var dbConexion = await database;
-    var result = await dbConexion.query("tbl_notas");
+    var result = await dbConexion!.query("tbl_notas");
     var list = result.map((note)=>NotesDAO.fromMap(note)).toList();
     return list;
   }

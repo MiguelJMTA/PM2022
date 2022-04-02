@@ -31,7 +31,7 @@ class _fruitAppState extends State<FruitApp> {
                 Icons.arrow_back,
               ),
               onPressed: () {
-                Navigator.pushNamed(context, '/dashboard');
+                Navigator.pop(context);
               },
             ),
           ],
