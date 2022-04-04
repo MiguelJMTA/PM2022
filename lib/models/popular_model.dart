@@ -32,7 +32,9 @@ class PopularModel {
         originalLanguage: map['original_language'],
         originalTitle: map['original_title'],
         overview: map['overview'],
-        popularity: map['popularity'],
+        popularity: map['popularity']is int
+            ? ( map['popularity'] as int).toDouble()
+            :  map['popularity'],
         posterPath: map['poster_path'] ?? '',
         releaseDate: map['release_date'],
         title: map['title'],

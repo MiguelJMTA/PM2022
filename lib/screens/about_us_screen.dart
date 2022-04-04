@@ -22,7 +22,7 @@ class _AboutUsScreenState extends State<AboutUsScreen> {
       ),
       floatingActionButton: CircularMenu(
         startingAngleInRadian: pi,
-        endingAngleInRadian: 0.28,
+        endingAngleInRadian: 6.28,
         radius: 80,
         items: [
           CircularMenuItem(

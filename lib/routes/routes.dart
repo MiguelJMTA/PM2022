@@ -4,6 +4,7 @@ import 'package:flutter_interfaz/screens/add_note_screen.dart';
 import 'package:flutter_interfaz/screens/dashboard.dart';
 import 'package:flutter_interfaz/screens/detail_movie_screen.dart';
 import 'package:flutter_interfaz/screens/login_screen.dart';
+import 'package:flutter_interfaz/screens/movie_favorite_screen.dart';
 import 'package:flutter_interfaz/screens/notes_screen.dart';
 import 'package:flutter_interfaz/screens/popular_screen.dart';
 
@@ -23,5 +24,6 @@ Map<String, WidgetBuilder> getAppRoutes() {
     '/movies': (BuildContext context) => PopularScreen(),
     '/movies_detail': (BuildContext context) => DetailMovieScreen(),
     '/about_us':(BuildContext context)=>AboutUsScreen(),
+    '/favorite_movies':(BuildContext context)=>MovieFavoriteScreen(),
   };
 }

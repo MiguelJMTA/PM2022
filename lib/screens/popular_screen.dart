@@ -51,7 +51,9 @@ class _PopularScreenState extends State<PopularScreen> {
       child: ListView.separated(
           itemBuilder: (context, index) {
             PopularModel popular = movies![index];
-            return CardPopularView(popularModel: popular,);
+            return CardPopularView(
+              popularModel: popular,
+            );
           },
           separatorBuilder: (_, __) => Divider(
                 height: 10,
