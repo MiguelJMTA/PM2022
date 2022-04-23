@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_interfaz/screens/about_us_screen.dart';
 import 'package:flutter_interfaz/screens/add_note_screen.dart';
 import 'package:flutter_interfaz/screens/dashboard.dart';
+import 'package:flutter_interfaz/screens/deals_home_screen.dart';
+import 'package:flutter_interfaz/screens/detail_deal_screen.dart';
 import 'package:flutter_interfaz/screens/detail_movie_screen.dart';
 import 'package:flutter_interfaz/screens/login_screen.dart';
 import 'package:flutter_interfaz/screens/movie_favorite_screen.dart';
@@ -25,5 +27,7 @@ Map<String, WidgetBuilder> getAppRoutes() {
     '/movies_detail': (BuildContext context) => DetailMovieScreen(),
     '/about_us':(BuildContext context)=>AboutUsScreen(),
     '/favorite_movies':(BuildContext context)=>MovieFavoriteScreen(),
+    '/deals_home':(BuildContext context)=>DealsHomeScreen(),
+    '/deal_detail':(BuildContext context)=>DetailDealScreen(),
   };
 }

@@ -72,6 +72,13 @@ class DashBoard extends StatelessWidget {
                   trailing: Icon(Icons.chevron_right,color: Colors.black,),
                   onTap: (){Navigator.pushNamed(context, '/favorite_movies');},
                 ),
+                ListTile(
+                  title: Text('Deals'),
+                  subtitle: Text('Deals screen'),
+                  leading: Icon(Icons.discount_outlined),
+                  trailing: Icon(Icons.chevron_right,color: Colors.black,),
+                  onTap: (){Navigator.pushNamed(context, '/deals_home');},
+                ),
           ],
         ),
       ),
