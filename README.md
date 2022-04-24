@@ -14,5 +14,5 @@ Aplicación móvil, trabajo en clase, prácticas, etc.
 
 #### Anotaciones
 - Es necesario que se cambien las API Key de los siguientes archivos:
-- -  Android/app/src/main/androidManifest.xml
-- -  lib/network/api_popular.dart
+  -  Android/app/src/main/androidManifest.xml
+  -  lib/network/api_popular.dart
