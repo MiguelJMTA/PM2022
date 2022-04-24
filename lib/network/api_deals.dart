@@ -6,7 +6,7 @@ import 'package:flutter_interfaz/models/stores_model.dart';
 import 'package:http/http.dart' as http;
 
 class ApiDeals {
-  var URLDEALS = Uri.parse('https://www.cheapshark.com/api/1.0/deals');
+  var URLDEALS = Uri.parse('https://www.cheapshark.com/api/1.0/deals?storeID=1');
 
   Future<List<DealDAO>?> getAllDeals() async {
     var response = await http.get(URLDEALS);

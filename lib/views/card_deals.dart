@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_interfaz/models/deals_model.dart';
+import 'package:flutter_interfaz/screens/detail_deal_screen.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 class CardDealsView extends StatelessWidget {
-  CardDealsView({Key? key, this.dealDAO}) : super(key: key);
+  CardDealsView({Key? key, required this.dealDAO}) : super(key: key);
   DealDAO? dealDAO;
 
   get btnSend => null;
@@ -27,7 +28,7 @@ class CardDealsView extends StatelessWidget {
           ),
         ),
         Text(
-          "\$" + dealDAO!.salePrice!,
+          "Price: \$" + dealDAO!.salePrice!,
           style: TextStyle(
             color: Colors.black,
             fontSize: 15,
@@ -36,20 +37,12 @@ class CardDealsView extends StatelessWidget {
         IconButton(
             alignment: Alignment.bottomCenter,
             onPressed: () {
-              Navigator.pushNamed(
-                                  context,
-                                  '/deal_detail',
-                                  arguments: {
-                                    'thumb':dealDAO!.thumb! ,
-                                    'title':dealDAO!.title! ,
-                                    'salePrice':dealDAO!.salePrice! ,
-                                    'normalPrice':dealDAO!.normalPrice! ,
-                                    'savings':dealDAO!.savings! ,
-                                    'steamRatingText':dealDAO!.steamRatingText! ,
-                                    'dealRating':dealDAO!.dealRating! ,
-                                    'id':dealDAO!.gameID! ,
-                                  },
-                                );
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => DetailDealScreen(
+                            dealDAO: dealDAO!,
+                          )));
             },
             icon: Icon(
               Icons.chevron_right,
